@@ -1,5 +1,7 @@
 :host{
-    --size:36px;
+    --default-size:16px;
+    --mid-size:26px;
+    --high-size:36px;
 }
 .container{
     width: 100dvw;
@@ -9,9 +11,19 @@
     align-items: center;
     background-color: #f0f0f0;
     p{
-        font:var(--size) Arial,sans-serif;
+        font:var(--default-size) Arial,sans-serif;
         color: #000000;
         text-shadow: 0px 4px 4px rgba(0,0,0,0.2);
         
+    }
+}
+@media (min-width:600px) {
+    .container p{
+        font-size:var(--mid-size) ;
+    }
+}
+@media (min-width:1200px) {
+    .container p{
+        font-size:var(--high-size) ;
     }
 }
